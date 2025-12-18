@@ -15,7 +15,7 @@
       "location" : "https://github.com/minhtien1403/ios-data-package",
       "state" : {
         "branch" : "master",
-        "revision" : "844bb3fea7cc2eb0ff08334e7026cf4d5444e770"
+        "revision" : "35ede00c1d1377ea4687f7433baf3afb8ad8a48d"
       }
     },
     {
@@ -24,7 +24,7 @@
       "location" : "https://github.com/minhtien1403/ios-domain-package",
       "state" : {
         "branch" : "master",
-        "revision" : "2de07cbc45d62539833bf5b79490d4942541c40d"
+        "revision" : "b590ec51c7b1ec7a82d65f1e7b9fc215ba7109e1"
       }
     },
     {

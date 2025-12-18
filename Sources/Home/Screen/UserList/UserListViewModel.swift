@@ -30,10 +30,10 @@ public protocol UserListViewModelType {
 final class UserListViewModel: BaseViewModel {
     
     var users: [User]
-    private let usecase: GetListUserUsecase
+    private let usecase: UserUsecase
     private let getUsersSubject = PassthroughSubject<Result<Void, APIError>, Never>()
     
-    public init(usecase: GetListUserUsecase, users: [User]) {
+    public init(usecase: UserUsecase, users: [User]) {
         self.usecase = usecase
         self.users = users
     }

@@ -29,10 +29,10 @@ public protocol UserDetailsViewModelType {
 final class UserDetailsViewModel: BaseViewModel {
     
     var username: String
-    private let usecase: GetUserDetailsUsecase
+    private let usecase: UserUsecase
     private let getUserDetailsSubject = PassthroughSubject<Result<UserDetails, APIError>, Never>()
     
-    init(usecase: GetUserDetailsUsecase, username: String) {
+    init(usecase: UserUsecase, username: String) {
         self.usecase = usecase
         self.username = username
     }
@@ -52,7 +52,7 @@ extension UserDetailsViewModel: UserDetailsViewModelType {
 extension UserDetailsViewModel: UserDetailsViewModelInputType {
     
     func fetchUserDetails() {
-        usecase.getUserDetails(username: username)
+        usecase.getUserDetails(userName: username)
             .sink { [weak self] result in
                 switch result {
                 case .success(let userDetails):

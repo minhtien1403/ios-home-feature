@@ -6,7 +6,7 @@
       "location" : "https://github.com/minhtien1403/ios-core-package",
       "state" : {
         "branch" : "master",
-        "revision" : "ce95b542526a3c7d3b85dbeff786575ffc984182"
+        "revision" : "657bc7003adfea3aeb76622c9f569cf8bfbdf767"
       }
     },
     {
@@ -33,7 +33,7 @@
       "location" : "https://github.com/minhtien1403/ios-shared-package",
       "state" : {
         "branch" : "master",
-        "revision" : "3619767fa21cfca35abee7c7202071e60ab1b52b"
+        "revision" : "08d4539d5c8bba4cdab54b04687b3794bf3415ad"
       }
     },
     {

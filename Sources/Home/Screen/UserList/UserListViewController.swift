@@ -56,7 +56,8 @@ final class UserListViewController: BaseViewController<UserListViewModelType> {
 extension UserListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.output.users.count
+        Log.info("user count: \(viewModel.output.users.count)")
+        return viewModel.output.users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

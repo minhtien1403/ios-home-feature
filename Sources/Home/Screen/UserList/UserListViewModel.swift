@@ -54,6 +54,7 @@ extension UserListViewModel: UserListViewModelInputType {
                 switch result {
                 case .success(let users):
                     self?.users = users
+                    self?.getUsersSubject.send(.success(()))
                 case .failure(let error):
                     self?.getUsersSubject.send(.failure(error))
                 }

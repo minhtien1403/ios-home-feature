@@ -14,6 +14,13 @@ import Domain
 
 final class UserListViewController: BaseViewController<UserListViewModelType> {
     
+    private var router: HomeFeatureInterface
+    
+    init(router: HomeFeatureInterface, viewModel: UserListViewModelType) {
+        self.router = router
+        super.init(viewModel: viewModel)
+    }
+    
     private let tableView: UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
@@ -70,7 +77,7 @@ extension UserListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let username = viewModel.output.users[indexPath.row].login
-        let vc = HomeFeature().makeUserdetailViewController(username: username)
+        let vc = router.makeUserdetailViewController(username: username)
         navigationController?.pushViewController(vc, animated: true)
     }
 }

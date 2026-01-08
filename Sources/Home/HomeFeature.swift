@@ -9,18 +9,20 @@ import UIKit
 import Core
 import Shared
 import Domain
-import Data
 
 public final class HomeFeature: HomeFeatureInterface {
     
-    public init() {
-        
+    private let repository: UserRepository
+    
+    public init(repository: UserRepository) {
+        self.repository = repository
     }
     
     public func makeUserListViewController() -> UIViewController {
         UserListViewController(
+            router: self,
             viewModel: UserListViewModel(
-                usecase: UserUsecaseImpl(repository: UserRepositoryImpl()),
+                usecase: UserUsecaseImpl(repository: repository),
                 users: []
             )
         )
@@ -29,7 +31,7 @@ public final class HomeFeature: HomeFeatureInterface {
     public func makeUserdetailViewController(username: String) -> UIViewController {
         UserDetailsViewController(
             viewModel: UserDetailsViewModel(
-                usecase: UserUsecaseImpl(repository: UserRepositoryImpl()),
+                usecase: UserUsecaseImpl(repository: repository),
                 username: username
             )
         )

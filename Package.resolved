@@ -10,15 +10,6 @@
       }
     },
     {
-      "identity" : "ios-data-package",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/minhtien1403/ios-data-package",
-      "state" : {
-        "branch" : "master",
-        "revision" : "35ede00c1d1377ea4687f7433baf3afb8ad8a48d"
-      }
-    },
-    {
       "identity" : "ios-domain-package",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/minhtien1403/ios-domain-package",
